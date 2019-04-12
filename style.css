@@ -31,7 +31,7 @@ body {
   z-index: 1;
   top: 10%;
   left: 50%;
-  margin-top: 50px;
+  margin-top: 70px;
   margin-left: -145px;
   width: 300px;
   height: 350px;
@@ -85,4 +85,45 @@ p {
 footer p {
   padding: 10px;
   text-align: center;
+}
+
+
+@media (max-width: 560px) {
+  .showcase::after {
+    height: 50vh;
+  }
+
+  .header-content {
+    top: 5%;
+    margin-top: 5px;
+  }
+
+  .logo {
+    height: 120px;
+    width: 120px;
+  }
+
+  .header-text {
+    display: none;
+  }
+
+  .grid-3, .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-3 div:not(:last-child) {
+    border-bottom: #666 dashed 1px;
+    padding: 1.2rem 1rem;
+  }
+}
+
+/* Landscape */
+@media(max-height: 500px) {
+  .title, .heading-text {
+    display: none;
+  }
+
+  .header-content {
+    top: 10%;
+  }
 }
